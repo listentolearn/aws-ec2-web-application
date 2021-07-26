@@ -26,8 +26,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 This project is built to host a PHP application in AWS EC2 instance.
 
 
