@@ -1,21 +1,23 @@
-variable "access_key" {}
-variable "secret_key" {}
+variable "access_key" {  
+}
+variable "secret_key" {
+}
 
 variable "region" {
-    type = "string"
-    description = "aws region where the VM will be provisioned"
-    default = "us-east-1"
+    type = string
+    description = "aws region where VM will be rpovisioned"
+    default = "us-east-1"  
 }
 
 variable "ami" {
-    type = "string"
+    type = string
     description = "aws ami used to provision the VM"
     default = "ami-0233c2d874b811deb"
 }
 
 variable "instance_ssh_public_key" {
-    type = "string"
-    description = "your ssh public key"
+  type = string
+  description = "your ssh public key"
 }
 
 data "http" "my_public_ip" {
@@ -26,5 +28,5 @@ data "http" "my_public_ip" {
 }
 
 locals {
-    my_ip = jsondecode(data.http.my_public_ip.body)
+  my_ip = jsondecode(data.http.my_public_ip.body)
 }
