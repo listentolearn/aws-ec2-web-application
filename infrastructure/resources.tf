@@ -4,8 +4,6 @@ terraform {
 
 provider "aws" {
   region     = var.region
-  access_key = var.access_key
-  secret_key = var.secret_key
 }
 
 provider "random" {
@@ -37,7 +35,7 @@ resource "aws_key_pair" "app_ssh" {
   public_key = var.instance_ssh_public_key
   tags = {
     Name      = "application-ssh"
-    createdBy = "listentolearn"
+    createdBy = "Dave_One"
   }
 }
 
@@ -52,7 +50,7 @@ resource "aws_instance" "app_vm" {
 
   tags = {
     Name      = "application-vm"
-    createdBy = "listentolearn"
+    createdBy = "Dave_One"
   }
 }
 
